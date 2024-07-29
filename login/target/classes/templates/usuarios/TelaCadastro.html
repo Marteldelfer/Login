@@ -23,6 +23,15 @@
                     </div>
 
                     <div class="row mb-2">
+                        <label class="col-sm-4 col-form-label">Sobrenome</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" th:field="${usuarioDto.sobrenome}">
+                            <p th:if="${#fields.hasErrors('sobrenome')}" 
+                            th:errorclass="text-danger" th:errors="${usuarioDto.sobrenome}"></p>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
                         <label class="col-sm-4 col-form-label">Email</label>
                         <div class="col-sm-8">
                             <input class="form-control" th:field="${usuarioDto.email}">
@@ -40,23 +49,14 @@
                         </div>
                     </div>
 
-                    <div class="row mb-3">
-                        <label class="col-sm-4 col-form-label">Imagem</label>
-                        <div class="col-sm-8">
-                            <input class="form-control" type="file" th:field="${usuarioDto.imageFile}">
-                            <p th:if="${#fields.hasErrors('imageFile')}" th:errorclass="text-danger"
-                            th:errors="${usuarioDto.imageFile}"></p>
-                        </div>
-                    </div>
-
                     <div class="row">
                         <div class="offset-sm-4 col-sm-4 d-grid">
-                            <button type="submit" class="btn btn-primary">Cadastra-se</button>
+                            <button type="submit" class="btn btn-primary">Cadastrar-se</button>
                         </div>
                         <div class="col-sm-4 d-grid">
-                            <a class="btn btn-outline-primary" href="/index" role="button">Cancelar</a>
+                            <a class="btn btn-outline-primary" href="/usuarios" role="button">Cancelar</a>
                         </div>
-                    </div>
+                    </div>  
                 </form>
 
             </div>
