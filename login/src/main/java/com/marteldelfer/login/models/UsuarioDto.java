@@ -1,7 +1,5 @@
 package com.marteldelfer.login.models;
 
-import org.springframework.web.multipart.MultipartFile;
-
 import jakarta.validation.constraints.NotEmpty;
 
 public class UsuarioDto {
@@ -9,13 +7,14 @@ public class UsuarioDto {
     @NotEmpty(message = "Nome é obrigatório")
     private String nome;
 
+    @NotEmpty
+    private String sobrenome;
+
     @NotEmpty(message = "Email é obrigatório")
     private String email;
 
     @NotEmpty(message = "Senha é obrigatória")
     private String senha;
-
-    private MultipartFile imageFile;
 
     public String getNome() {
         return nome;
@@ -23,6 +22,14 @@ public class UsuarioDto {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
     }
 
     public String getEmail() {
@@ -39,15 +46,5 @@ public class UsuarioDto {
 
     public void setSenha(String senha) {
         this.senha = senha;
-    }
-
-    public MultipartFile getImageFile() {
-        return imageFile;
-    }
-
-    public void setImageFile(MultipartFile imageFile) {
-        this.imageFile = imageFile;
-    }
-    
-
+    } 
 }

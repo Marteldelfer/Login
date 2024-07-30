@@ -14,10 +14,10 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nome;
+    private String sobrenome;
     private String email;
     private String senha;
     private Date criadoEm;
-    private String imagemNome;
 
 
     public int getId() {
@@ -31,6 +31,12 @@ public class Usuario {
     }
     public void setNome(String nome) {
         this.nome = nome;
+    }
+    public String getSobrenome() {
+        return sobrenome;
+    }
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
     }
     public String getEmail() {
         return email;
@@ -49,13 +55,5 @@ public class Usuario {
     }
     public void setCriado(Date criadoEm) {
         this.criadoEm = criadoEm;
-    }
-    public String getImagemNome() {
-        return imagemNome;
-    }
-    public void setImagemNome(String imagemNome) {
-        this.imagemNome = imagemNome;
-    }
-
-    
+    }  
 }

@@ -10,15 +10,15 @@
     <div class="container">
         <h1 class="text-center my-4">Tela Inicial</h1>
         
-        <a class="btn btn-primary" href="/login">Login</a>
-        <a class="btn btn-primary" href="/cadastro">Cadastro</a>
+        <a class="btn btn-primary" href="/usuarios/login">Login</a>
+        <a class="btn btn-primary" href="/usuarios/cadastro">Cadastro</a>
 
         <table class="table">
           <thead>
             <tr>
-              <th>Foto</th>
               <th>ID</th>
               <th>Nome</th>
+              <th>Sobrenome</th>
               <th>Email</th>
               <th>Senha</th>
               <th>Cadastrado em</th>
@@ -29,11 +29,9 @@
 
             <tr th:each="usuario : ${usuarios}">
               <td>th:</td>
-              <td>
-                <img th:src="@{'/imagens/' + ${usuario.imagemNome}}" alt="..." width="100">
-              </td>
               <td th:text="${usuario.id}"></td>
               <td th:text="${usuario.nome}"></td>
+              <td th:text="${usuario.sobrenome}"></td>
               <td th:text="${usuario.email}"></td>
               <td th:text="${usuario.senha}"></td>
               <td th:text="${usuario.criadoEm.toString().substring(0,10)}"></td>
