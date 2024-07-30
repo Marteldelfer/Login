@@ -50,10 +50,10 @@ public class Usuario {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-    public Date getCriado() {
+    public Date getCriadoEm() {
         return criadoEm;
     }
-    public void setCriado(Date criadoEm) {
+    public void setCriadoEm(Date criadoEm) {
         this.criadoEm = criadoEm;
     }  
 }
