@@ -49,6 +49,15 @@
                         </div>
                     </div>
 
+                    <div class="row mb-2">
+                        <label class="col-sm-4 col-form-label">Confirme a senha</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" type="password" th:field="${usuarioDto.confirmaSenha}">
+                            <p th:if="${#fields.hasErrors('confirmaSenha')}" 
+                            th:errorclass="text-danger" th:errors="${usuarioDto.confirmaSenha}"></p>
+                        </div>
+                    </div>
+
                     <div class="row">
                         <div class="offset-sm-4 col-sm-4 d-grid">
                             <button type="submit" class="btn btn-primary">Cadastrar-se</button>

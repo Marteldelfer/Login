@@ -16,6 +16,17 @@ public class UsuarioDto {
     @NotEmpty(message = "Senha é obrigatória")
     private String senha;
 
+    @NotEmpty(message = "Confirme a senha")
+    private String confirmaSenha;
+
+    public String getConfirmaSenha() {
+        return confirmaSenha;
+    }
+
+    public void setConfirmaSenha(String confirmaSenha) {
+        this.confirmaSenha = confirmaSenha;
+    }
+
     public String getNome() {
         return nome;
     }
