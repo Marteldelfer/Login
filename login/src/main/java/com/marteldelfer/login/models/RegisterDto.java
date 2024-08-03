@@ -6,14 +6,14 @@ import jakarta.validation.constraints.Size;
 
 public class RegisterDto {
     
-    @NotEmpty
+    @NotEmpty(message = "Must not be empty")
     private String firstName;
 
-    @NotEmpty
+    @NotEmpty(message = "Must not be empty")
     private String lastName;
 
-    @NotEmpty
-    @Email
+    @NotEmpty(message = "Must not be empty")
+    @Email(message = "Must be a proper email address")
     private String email;
 
     private String phone;
