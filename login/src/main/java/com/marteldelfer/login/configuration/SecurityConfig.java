@@ -19,16 +19,16 @@ public class SecurityConfig {
                 .requestMatchers("/").permitAll()
                 .requestMatchers("/contact").permitAll()
                 .requestMatchers("/store/**").permitAll()
-                .requestMatchers("register").permitAll()
-                .requestMatchers("login").permitAll()
-                .requestMatchers("logout").permitAll()
+                .requestMatchers("/register").permitAll()
+                .requestMatchers("/login").permitAll()
+                .requestMatchers("/logout").permitAll()
                 .anyRequest().authenticated()
-                )
-                .formLogin(form -> form
-                    .defaultSuccessUrl("/", true)
-                )
-                .logout(config -> config.logoutSuccessUrl("/"))
-                .build();
+            )
+            .formLogin(form -> form
+                .defaultSuccessUrl("/", true)
+            )
+            .logout(config -> config.logoutSuccessUrl("/"))
+            .build();
     }
 
     @Bean
