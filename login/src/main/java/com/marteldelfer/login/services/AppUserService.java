@@ -1,7 +1,7 @@
 package com.marteldelfer.login.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.security.SecurityProperties.User;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -29,7 +29,7 @@ public class AppUserService implements UserDetailsService {
             return springUser;
         }
 
-        return null
+        return null;
     }
     
 }
